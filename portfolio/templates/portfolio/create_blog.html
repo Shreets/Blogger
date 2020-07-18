@@ -1,0 +1,15 @@
+{% extends 'portfolio/base.html' %}
+{% block content%}
+<div class="create-form">
+<form action="" method="POST">
+    {% csrf_token %}
+<!--    {{form.as_table}}-->
+    {% for field in form %}
+    <div class="form-group">
+       <span class="create-label">{{ field.label_tag }} </span><span class="create-field"> {{ field }}</span>
+    </div>
+    {% endfor %}
+    <button class="btn btn-info" type="submit">Save</button>
+</form>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html' %}
+{% block content%}
+
+<h1 class="blog_title">{{blogs.title}}</h1>
+<div class="blog-detail blog-body">
+    <h5>Posted On : {{blogs.date_created}}</h5>
+    {% if blogs.image %}
+    <img height="400" src="{{blogs.image.url}}" width="600"/>
+    {% endif %}
+    <p>{{blogs.body}}</p>
+</div>
+{% endblock %}
